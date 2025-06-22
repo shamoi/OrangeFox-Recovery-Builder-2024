@@ -14,7 +14,7 @@ on:
       DEVICE_TREE:
         description: 'Custom Recovery Tree'
         required: true
-        default: 'https://github.com/kay6888/device_motorola_fogo.git'
+        default: 'https://github.com/shamoi/device_motorola_fogo.git'
       DEVICE_TREE_BRANCH:
         description: 'Custom Recovery Tree Branch'
         required: true
@@ -93,8 +93,8 @@ jobs:
       run: |
         mkdir -p ${GITHUB_WORKSPACE}/OrangeFox
         cd ${GITHUB_WORKSPACE}/OrangeFox
-        git config --global user.name "Samuel Kendall"
-        git config --global user.email "kinguser981@gmail.com"
+        git config --global user.name "Shamoi"
+        git config --global user.email "srlessard91@gmail.com"
         git clone https://gitlab.com/OrangeFox/sync.git
         cd sync
         ./orangefox_sync.sh --branch ${{ github.event.inputs.MANIFEST_BRANCH }} --path ${GITHUB_WORKSPACE}/OrangeFox/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
